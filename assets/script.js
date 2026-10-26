@@ -1,0 +1,1 @@
+document.querySelector('.menu')?.addEventListener('click',function(){const links=document.querySelector('.links');const open=links.classList.toggle('open');this.setAttribute('aria-expanded',String(open))});
