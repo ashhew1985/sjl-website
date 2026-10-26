@@ -1,0 +1,69 @@
+/* Steven Johnson Limited — Contact page / October 2026 */
+.contact-page{--contact-ink:#10224b;--contact-navy:#081b47;--contact-red:#bb1123;--contact-slate:#596a82;--contact-line:#e1e7f0;background:#fff}
+.contact-page .sv-hero{background-position:center 47%}
+.contact-page .sv-hero .wrap{padding-top:119px;padding-bottom:45px}
+.contact-page .sv-hero h1{font-size:clamp(39px,4vw,57px);margin:15px 0 12px}
+.contact-page .sv-hero p{max-width:690px;font-size:15px}
+.contact-page .ct-main{background:linear-gradient(180deg,#fff 0%,#fff 60%,#fafbfd 100%);padding:76px 0 83px}
+.contact-page .ct-main__grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:70px;align-items:start}
+.contact-page .ct-copy{padding:10px 0 0}
+.contact-page .ct-copy h2{font-size:clamp(31px,3.3vw,46px);line-height:1.13;letter-spacing:-1.2px;margin:18px 0 17px;color:var(--contact-ink)}
+.contact-page .ct-copy h2 em{font-style:normal;color:#3d5376}
+.contact-page .ct-copy__lead{font-size:15px;line-height:1.82;color:#5a6c83;max-width:475px;margin:0 0 33px}
+.contact-page .ct-methods{display:grid;gap:12px}
+.contact-page .ct-method{display:flex;align-items:center;gap:18px;padding:19px 22px;background:#f5f7fb;border:1px solid #e0e6ef;text-decoration:none;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.contact-page .ct-method:hover{background:#fff;border-color:#b5c1d3;transform:translateY(-2px)}
+.contact-page .ct-method__symbol{width:45px;height:45px;flex:0 0 45px;border:1px solid #dce4ef;display:grid;place-items:center;color:#b61223;background:#fff}
+.contact-page .ct-method__symbol svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.contact-page .ct-method__content{min-width:0;flex:1;display:block}
+.contact-page .ct-method__label{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#a10f22;font-weight:800;display:block;margin-bottom:6px}
+.contact-page .ct-method__value{font-size:15px;line-height:1.45;font-weight:750;color:#10224c;overflow-wrap:anywhere;display:block}
+.contact-page .ct-method__arrow{font-size:18px;color:#ae1020}
+.contact-page .ct-personal-note{padding:24px 25px;margin-top:29px;border-left:3px solid #c31b2a;background:#f5f7fb}
+.contact-page .ct-personal-note strong{font-size:14px;color:#122551;line-height:1.55}
+.contact-page .ct-personal-note p{font-size:13px;line-height:1.73;color:#64748b;margin:9px 0 0}
+.contact-page .ct-form-card{padding:36px 40px 35px;background:#fff;box-shadow:0 20px 58px rgba(5,24,62,.075);border:1px solid #dde5ef;position:relative}
+.contact-page .ct-form-card:before{content:"";position:absolute;left:-1px;top:-1px;height:4px;width:73px;background:#bd1627}
+.contact-page .ct-form-card__eyebrow{font-size:10px;letter-spacing:2.1px;text-transform:uppercase;font-weight:800;color:#ac1223}
+.contact-page .ct-form-card h2{font-size:26px;letter-spacing:-.7px;line-height:1.25;margin:13px 0 8px;color:#0d204b}
+.contact-page .ct-form-card__intro{font-size:13px;line-height:1.75;color:#66758a;margin:0 0 25px}
+.contact-page .ct-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-page .ct-field{min-width:0}
+.contact-page .ct-field--full{grid-column:1/-1}
+.contact-page .ct-field label{display:block;color:#1e3154;font-size:12px;font-weight:800;margin-bottom:8px}
+.contact-page .ct-required{color:#b20d20}
+.contact-page .ct-field input,.contact-page .ct-field select,.contact-page .ct-field textarea{display:block;width:100%;min-width:0;background:#fafbfd;border:1px solid #ccd6e5;border-radius:2px;min-height:46px;padding:12px 13px;font:400 14px Arial,Helvetica,sans-serif;color:#1b3154;transition:border-color .16s ease,box-shadow .16s ease;appearance:none}
+.contact-page .ct-field textarea{resize:vertical;line-height:1.5;min-height:128px}
+.contact-page .ct-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%2352657d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-position:right 14px center;background-size:15px;background-repeat:no-repeat;padding-right:38px}
+.contact-page .ct-field input:focus,.contact-page .ct-field select:focus,.contact-page .ct-field textarea:focus{outline:none;border-color:#415e89;box-shadow:0 0 0 3px rgba(29,67,127,.13);background:#fff}
+.contact-page .ct-field ::placeholder{color:#8a99ac}
+.contact-page .ct-form-note{font-size:12px;color:#586b85;line-height:1.65;margin:19px 0 17px;display:flex;gap:9px;align-items:flex-start}
+.contact-page .ct-form-note svg{flex:0 0 16px;width:16px;height:16px;fill:none;stroke:#9b1d31;stroke-width:1.6;margin-top:2px}
+.contact-page .ct-actions{display:flex;flex-wrap:wrap;gap:10px}
+.contact-page .ct-send{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:47px;padding:12px 19px;border:1px solid #b61022;border-radius:2px;background:#bc1123;color:white;font-weight:800;font-size:12px;cursor:pointer;transition:background .2s ease}
+.contact-page .ct-send:hover:not(:disabled){background:#d51c2c}
+.contact-page .ct-copy-btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:12px 18px;background:#fff;border:1px solid #cbd5e2;color:#1a2e54;font-size:12px;font-weight:800;cursor:pointer}
+.contact-page .ct-copy-btn:hover:not(:disabled){background:#f2f5f9}
+.contact-page button:disabled{opacity:.5;cursor:not-allowed}
+.contact-page .ct-form-status{min-height:0;margin:13px 0 0;color:#334964;font-size:12px;line-height:1.7}
+.contact-page .ct-form-status:empty{display:none}
+.contact-page .ct-alternative{font-size:11px;color:#78869b;line-height:1.65;margin:15px 0 0}
+.contact-page .ct-alternative a{color:#a91529;text-decoration:underline}
+.contact-page .ct-process{background:#eef2f7;padding:65px 0 76px}
+.contact-page .ct-process__top{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:end}
+.contact-page .ct-process h2{font-size:clamp(29px,3vw,40px);line-height:1.14;letter-spacing:-1px;color:#112350;margin:17px 0 0}
+.contact-page .ct-process__top>p{font-size:14px;line-height:1.8;color:#596b82;margin:0}
+.contact-page .ct-process__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:29px}
+.contact-page .ct-process__step{background:#fff;border:1px solid #e0e6ef;padding:24px 24px 27px}
+.contact-page .ct-process__step b{font-size:11px;color:#b81225;letter-spacing:1.4px}
+.contact-page .ct-process__step h3{font-size:17px;color:#11244e;letter-spacing:-.3px;margin:16px 0 8px}
+.contact-page .ct-process__step p{font-size:13px;color:#64738a;line-height:1.72;margin:0}
+.contact-page .cta{background:#091d4c;padding:51px 0;border-top:3px solid #bd1425}
+.contact-page .cta h2{color:#fff;font-size:clamp(29px,2.8vw,40px);line-height:1.15;letter-spacing:-.8px;margin:0 0 9px}
+.contact-page .cta p{font-size:14px;line-height:1.65;color:#c6d5e9}
+.contact-page .cta .button{font-size:13px;white-space:nowrap;border-radius:2px}
+.contact-page a:focus-visible,.contact-page button:focus-visible{outline:3px solid #dc5a66;outline-offset:3px}
+@media(max-width:1050px){.contact-page .ct-main__grid{gap:38px}.contact-page .ct-form-card{padding:31px 28px}.contact-page .ct-process__top{gap:30px}}
+@media(max-width:850px){.contact-page .ct-main__grid{grid-template-columns:1fr;gap:40px}.contact-page .ct-main{padding:59px 0 65px}.contact-page .ct-copy{padding:0}.contact-page .ct-copy__lead{max-width:660px}.contact-page .ct-methods{grid-template-columns:1fr 1fr}.contact-page .ct-personal-note{margin-top:20px}.contact-page .ct-form-card{max-width:none}}
+@media(max-width:650px){.contact-page .sv-hero .wrap{padding-top:115px;padding-bottom:36px}.contact-page .ct-main{padding:49px 0 56px}.contact-page .ct-methods,.contact-page .ct-fields,.contact-page .ct-process__top,.contact-page .ct-process__steps{grid-template-columns:1fr}.contact-page .ct-field--full{grid-column:auto}.contact-page .ct-method{padding:17px 18px}.contact-page .ct-form-card{padding:27px 21px}.contact-page .ct-process{padding:53px 0 58px}.contact-page .ct-process__top{gap:13px}.contact-page .ct-process__steps{margin-top:23px}.contact-page .cta{padding:39px 0}}
+@media(prefers-reduced-motion:reduce){.contact-page .ct-method,.contact-page .ct-field input,.contact-page .ct-field select,.contact-page .ct-field textarea,.contact-page .ct-send{transition:none}}
