@@ -145,3 +145,36 @@ header .brand img{width:151px;height:56px}
 .sjl-home .home-service p{margin-bottom:16px}
 .sjl-home .home-approach__panel{height:265px}
 }
+
+/* Hero CTA visibility fix: content must never be clipped by a fixed-height banner. */
+.sjl-home .hero--photo{
+  height:auto;
+  min-height:390px;
+}
+.sjl-home .hero__inner{
+  padding-bottom:48px;
+}
+.sjl-home .hero__actions{
+  position:relative;
+  z-index:2;
+}
+.sjl-home .hero__actions .button{
+  text-align:center;
+  white-space:normal;
+}
+.sjl-home .hero__actions .button:focus-visible,
+body.home-page header a:focus-visible,
+body.home-page header button:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:4px;
+}
+@media(max-width:900px){
+  .sjl-home .hero--photo{height:auto;min-height:390px}
+  .sjl-home .hero__inner{padding-top:125px;padding-bottom:45px}
+}
+@media(max-width:520px){
+  .sjl-home .hero--photo{height:auto;min-height:425px}
+  .sjl-home .hero__inner{padding-top:121px;padding-bottom:35px}
+  .sjl-home .hero__actions{display:grid;grid-template-columns:1fr;gap:10px;max-width:340px}
+  .sjl-home .hero__actions .button{width:100%;min-height:45px;justify-content:center}
+}
