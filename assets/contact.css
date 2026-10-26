@@ -67,3 +67,12 @@
 @media(max-width:850px){.contact-page .ct-main__grid{grid-template-columns:1fr;gap:40px}.contact-page .ct-main{padding:59px 0 65px}.contact-page .ct-copy{padding:0}.contact-page .ct-copy__lead{max-width:660px}.contact-page .ct-methods{grid-template-columns:1fr 1fr}.contact-page .ct-personal-note{margin-top:20px}.contact-page .ct-form-card{max-width:none}}
 @media(max-width:650px){.contact-page .sv-hero .wrap{padding-top:115px;padding-bottom:36px}.contact-page .ct-main{padding:49px 0 56px}.contact-page .ct-methods,.contact-page .ct-fields,.contact-page .ct-process__top,.contact-page .ct-process__steps{grid-template-columns:1fr}.contact-page .ct-field--full{grid-column:auto}.contact-page .ct-method{padding:17px 18px}.contact-page .ct-form-card{padding:27px 21px}.contact-page .ct-process{padding:53px 0 58px}.contact-page .ct-process__top{gap:13px}.contact-page .ct-process__steps{margin-top:23px}.contact-page .cta{padding:39px 0}}
 @media(prefers-reduced-motion:reduce){.contact-page .ct-method,.contact-page .ct-field input,.contact-page .ct-field select,.contact-page .ct-field textarea,.contact-page .ct-send{transition:none}}
+
+/* Functional contact form refinements */
+.contact-page .ct-honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.contact-page .ct-form-status[data-state="success"]{padding:13px 15px;border-left:3px solid #42785c;background:#f0f6f1;color:#264c39}
+.contact-page .ct-form-status[data-state="error"]{padding:13px 15px;border-left:3px solid #b71325;background:#fff3f4;color:#8a1e2c}
+.contact-page .ct-form-note a{text-decoration:underline;color:#9e1023;font-weight:700}
+.contact-page .ct-methods{display:block}
+.contact-page .ct-method{width:100%}
+.contact-page .ct-form-card__intro{max-width:540px}
