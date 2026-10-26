@@ -65,3 +65,83 @@ header .brand img{width:128px;height:51px;object-fit:contain;object-position:lef
 @media(max-width:1000px){.sjl-home .home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sjl-home .home-service{min-height:245px}.sjl-home .home-approach__layout{gap:35px}}
 @media(max-width:750px){.sjl-home .hero__inner{padding-top:57px;padding-bottom:58px}.sjl-home .hero--photo{background-position:63% center}.sjl-home .hero--photo:before{background:linear-gradient(90deg,rgba(3,12,42,.98),rgba(5,20,56,.83) 67%,rgba(6,18,44,.55))}.sjl-home .pillars--premium>.wrap{grid-template-columns:1fr;gap:12px}.sjl-home .pillar{border:0;padding:0 0 12px;border-bottom:1px solid #e0e5eb}.sjl-home .pillar:last-child{border-bottom:0;padding-bottom:0}.sjl-home .home-section-head{display:block}.sjl-home .home-section-head>p{margin-top:21px}.sjl-home .home-approach__layout{grid-template-columns:1fr}.sjl-home .home-approach__panel{height:300px}.sjl-home .home-sector-grid{grid-template-columns:1fr}.sjl-home section.home-services,.sjl-home section.home-approach,.sjl-home section.home-sectors{padding:54px 0}}
 @media(max-width:520px){.sjl-home .hero__inner h1{font-size:37px}.sjl-home .hero__actions{align-items:stretch}.sjl-home .hero__actions .button{justify-content:center;width:100%}.sjl-home .home-service-grid{grid-template-columns:1fr}.sjl-home .home-service{min-height:unset}.sjl-home .home-approach__panel{height:275px}.sjl-home .home-approach__steps div{font-size:24px}}
+
+
+/* SJL premium redesign / October 2026 */
+header .brand{gap:0;letter-spacing:0}
+header .brand img{display:block;width:183px;height:67px;object-fit:contain;object-position:left center;max-width:none}
+header .brand span{display:none}
+header .links{gap:25px;font-size:12px;letter-spacing:.2px;font-weight:600}
+header .links .contact-link{border-radius:2px;padding:13px 21px;background:#bd101e}
+body.home-page header{position:absolute;inset:0 0 auto;width:100%;z-index:20;background:linear-gradient(180deg,rgba(3,12,38,.90),rgba(3,12,38,.44));border-top:0;border-bottom:1px solid rgba(225,236,252,.17);box-shadow:none}
+body.home-page header .wrap{min-height:76px}
+.sjl-home .hero--photo{height:390px;min-height:0;background-color:#081733;background-image:linear-gradient(90deg,rgba(2,10,34,.90) 0%,rgba(4,17,45,.74) 34%,rgba(5,21,44,.37) 70%,rgba(5,15,32,.22) 100%),url("https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Substation_at_sunset_2017.jpg/1280px-Substation_at_sunset_2017.jpg");background-position:center 54%;background-size:cover;background-repeat:no-repeat}
+.sjl-home .hero--photo:before,.sjl-home .hero--photo:after{display:none}
+.sjl-home .hero__inner{padding-top:109px;padding-bottom:32px}
+.sjl-home .hero__inner .eyebrow{font-size:10px;letter-spacing:2.3px;color:#e1e9f2}
+.sjl-home .hero__inner h1{font-size:clamp(36px,3.65vw,53px);line-height:1.03;letter-spacing:-1.5px;margin:14px 0;max-width:710px;font-weight:700}
+.sjl-home .hero__inner p{font-size:15px;line-height:1.55;max-width:595px;margin:0 0 19px;color:#edf2f7}
+.sjl-home .hero__actions .button{min-height:44px;padding:11px 18px;font-size:12px;letter-spacing:.1px}
+.sjl-home .hero__edge{height:3px;background:linear-gradient(90deg,#b80817 0 15%,transparent 15%)}
+.sjl-home section.home-services{padding:64px 0 72px;background:#fff}
+.sjl-home .section-kicker{letter-spacing:2.6px;font-size:10px;color:#ba1423}
+.sjl-home .home-section-head h2{font-size:clamp(29px,3.15vw,43px);line-height:1.09;letter-spacing:-1.3px;margin:13px 0 0}
+.sjl-home .home-section-head>p{max-width:440px;font-size:14px;line-height:1.7;color:#526178;padding-bottom:6px}
+.sjl-home .home-service-grid{gap:0;border:1px solid #dce3ed;margin-top:32px;box-shadow:0 14px 32px #09214b06}
+.sjl-home .home-service{padding:25px 23px 22px;min-height:252px;box-shadow:none;border:0;border-right:1px solid #e5eaf1;transition:background .2s ease;transform:none}
+.sjl-home .home-service:last-child{border-right:0}
+.sjl-home .home-service:before{width:0;height:3px;transition:width .25s ease;background:#bd1120}
+.sjl-home .home-service:hover{transform:none;background:#f8fafc;box-shadow:none;border-color:#e5eaf1}
+.sjl-home .home-service:hover:before{width:100%}
+.sjl-home .home-service__icon{font-size:10px;letter-spacing:1.6px;padding:4px 0 7px;color:#b81121}
+.sjl-home .home-service h3{font-size:17px;line-height:1.3;letter-spacing:-.3px;margin:14px 0 10px}
+.sjl-home .home-service p{font-size:13px;line-height:1.65;color:#586b83}
+.sjl-home .home-service__arrow{font-size:11px;color:#ab0f1e}
+.sjl-home section.home-approach{padding:67px 0;background:#f0f3f8}
+.sjl-home .home-approach__panel{height:334px;padding:31px 35px;background:radial-gradient(circle at 86% 14%,#264b7d 0,transparent 46%),linear-gradient(145deg,#06143e,#0b2358)}
+.sjl-home .home-approach__steps{gap:9px}
+.sjl-home .home-approach__steps div{font-size:26px}
+.sjl-home .home-approach__copy h2{font-size:clamp(28px,3vw,40px);line-height:1.13}
+.sjl-home .home-approach__copy p{font-size:14px;line-height:1.75}
+.sjl-home section.home-sectors{padding:64px 0}
+.sjl-home .home-sectors h2{font-size:clamp(30px,3.3vw,42px);line-height:1.13}
+.sjl-home .home-sector-grid>a{background:#f8f9fc;border:1px solid #e0e6ef;min-height:151px}
+.sjl-home .home-sector-grid>a:hover{background:#fff}
+.sjl-home .home-sector-grid strong{font-size:16px}
+.sjl-home .home-sector-grid__desc{font-size:12px}
+@media(max-width:1000px){
+header .links{gap:15px;font-size:11px}
+header .brand img{width:158px;height:58px}
+.sjl-home .home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sjl-home .home-service{border-bottom:1px solid #e5eaf1;min-height:218px}
+.sjl-home .home-service:nth-child(2n){border-right:0}
+.sjl-home .home-service:nth-last-child(-n+2){border-bottom:0}
+}
+@media(max-width:900px){
+header .links{position:absolute;top:76px}
+body.home-page header .links{background:rgba(4,15,44,.98)}
+header button.menu{border-color:#ffffff73;border-radius:2px}
+body.home-page header .wrap{min-height:76px}
+}
+@media(max-width:750px){
+.sjl-home .hero--photo{height:auto;min-height:425px;background-position:64% 57%;background-image:linear-gradient(90deg,rgba(2,10,34,.90),rgba(4,15,39,.77) 68%,rgba(5,15,34,.58)),url("https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Substation_at_sunset_2017.jpg/1280px-Substation_at_sunset_2017.jpg")}
+.sjl-home .hero__inner{padding-top:122px;padding-bottom:47px}
+.sjl-home .hero__inner h1{font-size:clamp(34px,7vw,48px);line-height:1.07}
+.sjl-home .hero__inner p{font-size:14px}
+.sjl-home .home-section-head>p{padding-bottom:0}
+.sjl-home section.home-services,.sjl-home section.home-approach,.sjl-home section.home-sectors{padding:49px 0}
+.sjl-home .home-approach__panel{height:285px}
+}
+@media(max-width:520px){
+header .brand img{width:151px;height:56px}
+.sjl-home .hero--photo{min-height:425px}
+.sjl-home .hero__inner{padding-top:121px;padding-bottom:35px}
+.sjl-home .hero__inner h1{font-size:35px;letter-spacing:-1px}
+.sjl-home .hero__actions .button{width:auto;padding:11px 16px;font-size:12px}
+.sjl-home .home-service-grid{display:block}
+.sjl-home .home-service{min-height:0;padding:23px;border-right:0;border-bottom:1px solid #e5eaf1!important}
+.sjl-home .home-service:last-child{border-bottom:0!important}
+.sjl-home .home-service h3{margin:8px 0}
+.sjl-home .home-service p{margin-bottom:16px}
+.sjl-home .home-approach__panel{height:265px}
+}
