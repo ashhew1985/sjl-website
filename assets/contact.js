@@ -1,77 +1,59 @@
-/* SJL Contact — client-side email composer.
-   GitHub Pages cannot receive POST submissions without an external service.
-   This form prepares a mailto draft; the visitor chooses whether to send. */
+/* Steven Johnson Limited | website contact form
+ * FormSubmit.co receives the enquiry and forwards it to the business mailbox.
+ * A one-time mailbox activation is required before delivery can begin.
+ * No phone numbers, no analytics and no persistent browser storage.
+ */
 (() => {
   "use strict";
   const form = document.getElementById("sjl-contact-form");
   if (!form) return;
   const sendButton = document.getElementById("contact-send");
-  const copyButton = document.getElementById("contact-copy");
   const status = document.getElementById("contact-status");
-  const recipient = form.dataset.recipient || "";
-  if (!recipient || !recipient.includes("@")) return;
+  const endpoint = form.dataset.endpoint;
+  const businessEmail = "info@stevejohnsonltd.co.uk";
 
-  if (sendButton) sendButton.disabled = false;
-  if (copyButton) copyButton.disabled = false;
+  const report = (message, isError) => {
+    if (!status) return;
+    status.textContent = message;
+    status.dataset.state = isError ? "error" : "success";
+    status.setAttribute("role", isError ? "alert" : "status");
+  };
 
-  function value(name) {
-    const input = form.elements.namedItem(name);
-    return input && typeof input.value === "string" ? input.value.trim() : "";
-  }
-
-  function draft() {
-    const topic = value("enquiry_type") || "General enquiry";
-    const subject = "SJL website enquiry — " + topic;
-    const message = [
-      "Hello Steve,",
-      "",
-      "I'd like to discuss the following with Steven Johnson Limited.",
-      "",
-      "Name: " + value("name"),
-      "Company: " + (value("company") || "Not provided"),
-      "Email: " + value("email"),
-      "Telephone: " + (value("phone") || "Not provided"),
-      "Area of interest: " + topic,
-      "",
-      "How can SJL help?",
-      value("message"),
-      "",
-      "Kind regards,",
-      value("name")
-    ].join("\n");
-    return { subject, message };
-  }
-
-  function report(text) {
-    if (status) status.textContent = text;
-  }
-
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
+    if (!window.fetch || !endpoint) return; // Native HTML form remains a fallback.
     event.preventDefault();
     if (!form.reportValidity()) return;
-    const prepared = draft();
-    const href = "mailto:" + recipient + "?subject=" +
-      encodeURIComponent(prepared.subject) + "&body=" +
-      encodeURIComponent(prepared.message);
-    report("Your email application should open with a prepared draft. Please review it and press Send in your email application — nothing has been sent automatically.");
-    window.location.href = href;
-  });
 
-  copyButton?.addEventListener("click", async () => {
-    if (!value("name") && !value("message")) {
-      report("Enter your name or enquiry details first, then select Copy enquiry.");
-      return;
-    }
-    const prepared = draft();
-    const textToCopy = "To: " + recipient + "\nSubject: " +
-      prepared.subject + "\n\n" + prepared.message;
+    const formData = new FormData(form);
+    if (String(formData.get("_honey") || "").trim()) return;
+
+    const topic = String(formData.get("enquiry_type") || "General enquiry");
+    formData.set("_subject", "SJL website enquiry — " + topic);
+    const body = Object.fromEntries(formData.entries());
+    sendButton.disabled = true;
+    sendButton.setAttribute("aria-busy", "true");
+    sendButton.textContent = "Sending enquiry…";
+    if (status) { status.textContent = ""; status.removeAttribute("data-state"); }
+
     try {
-      if (!navigator.clipboard?.writeText) throw new Error("No clipboard API");
-      await navigator.clipboard.writeText(textToCopy);
-      report("Enquiry copied. Open your email app, paste the message and send it to " + recipient + ".");
-    } catch (_) {
-      window.prompt("Copy the enquiry below, then email " + recipient + ":", textToCopy);
-      report("If prompted, copy the enquiry and send it from your email application.");
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {"Content-Type":"application/json","Accept":"application/json"},
+        body: JSON.stringify(body)
+      });
+      if (!response.ok) throw new Error("Form endpoint returned " + response.status);
+      const result = await response.json();
+      if (result?.success === false || result?.success === "false") {
+        throw new Error(result?.message || "Submission was not accepted");
+      }
+      form.reset();
+      report("Thank you — your enquiry has been accepted by our form service. Once the SJL inbox has been activated, it will be delivered to our team.", false);
+    } catch (error) {
+      report("Your message could not be submitted. Please email " + businessEmail + " directly instead.", true);
+    } finally {
+      sendButton.disabled = false;
+      sendButton.removeAttribute("aria-busy");
+      sendButton.textContent = "Send enquiry →";
     }
   });
 })();
