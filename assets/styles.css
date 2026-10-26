@@ -178,3 +178,8 @@ body.home-page header button:focus-visible{
   .sjl-home .hero__actions{display:grid;grid-template-columns:1fr;gap:10px;max-width:340px}
   .sjl-home .hero__actions .button{width:100%;min-height:45px;justify-content:center}
 }
+
+/* Fine-tune hero spacing: retain visible CTAs but remove excess space underneath. */
+.sjl-home section.hero--photo{padding-bottom:0}
+.sjl-home .hero__inner{padding-bottom:38px}
+@media(max-width:750px){.sjl-home .hero__inner{padding-bottom:34px}}
