@@ -1,0 +1,27 @@
+/* SJL — focused ICP & IDNO landing page, inherits main and services design */
+.icp-page .icp-intro{padding:67px 0 47px;background:#fff}
+.icp-page .icp-intro__layout{display:grid;grid-template-columns:1.05fr .95fr;gap:75px;align-items:end}
+.icp-page .icp-intro__layout p{font-size:15px;line-height:1.85;color:#556881;margin:0}
+.icp-page .icp-audiences{padding:0 0 64px;background:#fff}
+.icp-page .icp-audiences__grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.icp-page .icp-audience{position:relative;border:1px solid #e0e6ef;background:#f8fafc;padding:31px 34px 32px;overflow:hidden}
+.icp-page .icp-audience:before{content:"";position:absolute;width:54px;height:4px;top:0;left:0;background:#b91222}
+.icp-page .icp-audience__eyebrow{display:block;color:#b41020;font-size:11px;font-weight:800;letter-spacing:1.8px}
+.icp-page .icp-audience h3{font-size:21px;line-height:1.34;letter-spacing:-.4px;color:#10224f;margin:16px 0 12px}
+.icp-page .icp-audience p{font-size:14px;line-height:1.8;color:#586b84;margin:0}
+.icp-page .icp-work{padding:71px 0 76px;background:#f0f3f8}
+.icp-page .icp-work__heading{max-width:780px;margin-bottom:32px}
+.icp-page .icp-work__heading p{font-size:14px;line-height:1.85;color:#576b84;margin:18px 0 0}
+.icp-page .icp-work__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.icp-page .icp-item{display:flex;gap:21px;padding:26px 27px 28px;background:#fff;border:1px solid #e1e7f0;min-width:0}
+.icp-page .icp-item__num{font-size:12px;font-weight:800;letter-spacing:1px;color:#b31123;padding-top:3px}
+.icp-page .icp-item h3{margin:0 0 10px;font-size:18px;color:#10224f;letter-spacing:-.3px}
+.icp-page .icp-item p{font-size:13px;line-height:1.75;color:#586b84;margin:0}
+.icp-page .icp-scope{padding:58px 0 65px;background:#fff}
+.icp-page .icp-scope__layout{display:flex;justify-content:space-between;gap:38px;align-items:center}
+.icp-page .icp-scope h2{font-size:clamp(28px,2.75vw,39px)}
+.icp-page .icp-scope p{max-width:650px;font-size:14px;line-height:1.85;color:#5b6d84;margin:15px 0 0}
+.icp-page .icp-scope .button{font-size:13px;border-radius:2px;padding:15px 24px;white-space:nowrap}
+.icp-page .sv-credit{padding:12px 0}
+@media(max-width:800px){.icp-page .icp-intro__layout{grid-template-columns:1fr;gap:14px}.icp-page .icp-scope__layout{flex-direction:column;align-items:flex-start;gap:20px}.icp-page .icp-intro{padding-top:52px}.icp-page .icp-audiences{padding-bottom:51px}}
+@media(max-width:600px){.icp-page .icp-audiences__grid,.icp-page .icp-work__grid{grid-template-columns:1fr}.icp-page .icp-intro{padding:48px 0 34px}.icp-page .icp-audiences{padding-bottom:45px}.icp-page .icp-work{padding:51px 0}.icp-page .icp-audience{padding:25px}.icp-page .icp-item{padding:23px 20px}.icp-page .icp-scope{padding:47px 0}}
