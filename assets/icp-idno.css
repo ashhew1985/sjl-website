@@ -25,3 +25,10 @@
 .icp-page .sv-credit{padding:12px 0}
 @media(max-width:800px){.icp-page .icp-intro__layout{grid-template-columns:1fr;gap:14px}.icp-page .icp-scope__layout{flex-direction:column;align-items:flex-start;gap:20px}.icp-page .icp-intro{padding-top:52px}.icp-page .icp-audiences{padding-bottom:51px}}
 @media(max-width:600px){.icp-page .icp-audiences__grid,.icp-page .icp-work__grid{grid-template-columns:1fr}.icp-page .icp-intro{padding:48px 0 34px}.icp-page .icp-audiences{padding-bottom:45px}.icp-page .icp-work{padding:51px 0}.icp-page .icp-audience{padding:25px}.icp-page .icp-item{padding:23px 20px}.icp-page .icp-scope{padding:47px 0}}
+
+/* Alternating specialist service groups */
+.icp-page .icp-work--white{background:#fff}
+.icp-page .icp-work--white .icp-item{background:#f7f9fc}
+.icp-page .icp-work--white .icp-item{border-color:#dfe7f1}
+.icp-page .icp-work[id]{scroll-margin-top:95px}
+.icp-page .icp-item p{overflow-wrap:break-word}
