@@ -1,0 +1,11 @@
+/* Our Team — retain SJL's established navy/red editorial design while removing the personal portrait. */
+.about-page .ab-team-visual{align-self:stretch;position:relative;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:105px 26px 52px 44px;min-width:0;overflow:hidden}
+.about-page .ab-team-visual:before{content:"";position:absolute;inset:22% -20% 10% 8%;border:1px solid rgba(222,234,250,.19);border-radius:50%;transform:rotate(-21deg)}
+.about-page .ab-team-visual:after{content:"";position:absolute;right:7%;top:22%;bottom:14%;width:2px;background:linear-gradient(180deg,transparent,#e23b4f,transparent);opacity:.85}
+.about-page .ab-team-visual__eyebrow{font-size:11px;color:#e3bac5;letter-spacing:2.5px;font-weight:800;z-index:1}
+.about-page .ab-team-visual strong{font-size:clamp(65px,7.5vw,112px);line-height:.98;letter-spacing:-6px;font-weight:850;color:#fff;z-index:1}
+.about-page .ab-team-visual strong span{color:#ef8b9b}
+.about-page .ab-team-visual__caption{font-size:11px;line-height:1.7;letter-spacing:1.15px;text-transform:uppercase;color:#dae7f6;z-index:1;max-width:260px}
+.about-page .ab-team-visual>*{position:relative}
+@media(max-width:900px){.about-page .ab-team-visual{padding:95px 12px 35px 16px}.about-page .ab-team-visual strong{font-size:65px}}
+@media(max-width:650px){.about-page .ab-team-visual{min-height:240px;align-items:flex-start;padding:20px 0 44px}.about-page .ab-team-visual strong{font-size:78px}.about-page .ab-team-visual__caption{max-width:none}}
