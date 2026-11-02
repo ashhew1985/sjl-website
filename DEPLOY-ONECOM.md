@@ -14,7 +14,7 @@
 5. Confirm `index.html`, `icp-idno.html`, `our-team.html`, `services.html`, `contact.html` and `assets/` are at web-root level.
 6. If an old `index.php` or another index file exists, back it up/remove it once approved so it cannot override the new `index.html`.
 7. Confirm the domain serves the uploaded site, HTTPS works, and both root and www variants resolve correctly.
-8. Test menu links, all pages, mobile layout, photographs, and the contact form end-to-end (FormSubmit may require activation/verification of info@stevejohnsonltd.co.uk).
+8. Test menu links, all pages, mobile layout, photographs, and the contact form end-to-end (FormSubmit may require activation/verification of info@stevenjohnsonltd.co.uk).
 9. Keep a known-good backup until the new site has been checked.
 
 ## Ongoing changes
@@ -24,8 +24,8 @@
 - GitHub Pages custom-domain/CNAME setup is **not** part of this one.com hosting approach.
 
 ## Notes
-- IMPORTANT: Confirm the correct email address with Steve; current contact form and mailto links use info@stevejohnsonltd.co.uk (without 'n'). The website domain is stevenjohnsonltd.co.uk (with 'n'). Do not change form routing until the intended receiving mailbox is confirmed.
-- The current contact form posts to https://formsubmit.co/info@stevejohnsonltd.co.uk and uses its AJAX endpoint. Test delivery; hosting alone does not guarantee email receipt.
+- Verify that info@stevenjohnsonltd.co.uk exists and can receive mail before relying on the form.
+- The current contact form posts to https://formsubmit.co/info@stevenjohnsonltd.co.uk and uses its AJAX endpoint. Test delivery; hosting alone does not guarantee email receipt.
 - Some images are loaded from Wikimedia URLs; those are external dependencies and may need local hosting if availability is an issue.
 - Do not change MX, SPF, DKIM, or DMARC DNS entries when transferring the website.
 - GitHub Pages' terms restrict its use as free commercial website hosting; use one.com as production hosting for SJL.
