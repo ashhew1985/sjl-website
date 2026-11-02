@@ -2,13 +2,13 @@
 
 ## Architecture
 - Source of truth: this GitHub repository (ashhew1985/sjl-website).
-- Production hosting: one.com web hosting for stevejohnsonltd.co.uk.
+- Production hosting: one.com web hosting for stevenjohnsonltd.co.uk.
 - GitHub Pages: development/preview only, not production business hosting.
 - DNS: retain at one.com; do **not** point to GitHub Pages for production.
 
 ## Initial deployment
 1. In GitHub, choose **Code > Download ZIP**. Extract it locally.
-2. In the one.com control panel, open **File Manager** for stevejohnsonltd.co.uk.
+2. In the one.com control panel, open **File Manager** for stevenjohnsonltd.co.uk.
 3. Back up any current website in the web-root folder before changing it. Check current email/DNS configuration.
 4. Upload **the contents** of the extracted website folder (not the folder itself) to one.com's web root (typically `httpd.www`).
 5. Confirm `index.html`, `icp-idno.html`, `our-team.html`, `services.html`, `contact.html` and `assets/` are at web-root level.
@@ -24,6 +24,7 @@
 - GitHub Pages custom-domain/CNAME setup is **not** part of this one.com hosting approach.
 
 ## Notes
+- IMPORTANT: Confirm the correct email address with Steve; current contact form and mailto links use info@stevejohnsonltd.co.uk (without 'n'). The website domain is stevenjohnsonltd.co.uk (with 'n'). Do not change form routing until the intended receiving mailbox is confirmed.
 - The current contact form posts to https://formsubmit.co/info@stevejohnsonltd.co.uk and uses its AJAX endpoint. Test delivery; hosting alone does not guarantee email receipt.
 - Some images are loaded from Wikimedia URLs; those are external dependencies and may need local hosting if availability is an issue.
 - Do not change MX, SPF, DKIM, or DMARC DNS entries when transferring the website.
