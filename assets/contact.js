@@ -10,7 +10,7 @@
   const sendButton = document.getElementById("contact-send");
   const status = document.getElementById("contact-status");
   const endpoint = form.dataset.endpoint;
-  const businessEmail = "info@stevejohnsonltd.co.uk";
+  const businessEmail = "info@stevenjohnsonltd.co.uk";
 
   const report = (message, isError) => {
     if (!status) return;
@@ -35,11 +35,14 @@
     sendButton.textContent = "Sending enquiry…";
     if (status) { status.textContent = ""; status.removeAttribute("data-state"); }
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
     try {
       const response = await fetch(endpoint, {
         method: "POST",
         headers: {"Content-Type":"application/json","Accept":"application/json"},
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
+        signal: controller.signal
       });
       if (!response.ok) throw new Error("Form endpoint returned " + response.status);
       const result = await response.json();
@@ -49,8 +52,9 @@
       form.reset();
       report("Thank you — your enquiry has been accepted by our form service. Once the SJL inbox has been activated, it will be delivered to our team.", false);
     } catch (error) {
-      report("Your message could not be submitted. Please email " + businessEmail + " directly instead.", true);
+      report(error?.name === "AbortError" ? "The form service did not respond. Please try again or email " + businessEmail + " directly." : "Your message could not be confirmed as sent. Please check for a FormSubmit activation email, or email " + businessEmail + " directly.", true);
     } finally {
+      clearTimeout(timeout);
       sendButton.disabled = false;
       sendButton.removeAttribute("aria-busy");
       sendButton.textContent = "Send enquiry →";
